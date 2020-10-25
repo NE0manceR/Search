@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="instruction-wrap">
+        <p><strong>Instruction</strong> - for example, <br> type one of the words below</p>
+        <strong>fold</strong> | <strong>test</strong> | <strong>my</strong>
+    </div>
+    <div class="wrap">
+
+        <div onclick="showFilters()" class="filter-wrap">
+            <div class="text-wrap"><span class="filter-style">All</span></div>
+            <img class="filter-icon" src="icons/filter-icon.svg" alt="img">
+        </div>
+
+        <div class="dropdown-filter">
+            <span onclick="setFilter(event)" class="filter-item">All</span>
+            <span onclick="setFilter(event)" class="filter-item">Folders</span>
+            <span onclick="setFilter(event)" class="filter-item">Objects</span>
+        </div>
+
+        <img class="line" src="icons/Line-icon.svg" alt="img">
+
+        <div class="serch-wrap">
+            <input onclick="search(event)" class="search" type="text" placeholder="Search">
+            <img onclick="clearInput()" class="search-icon" src="icons/search-icon.svg" alt="img">
+            <div class="search-result">
+                <span onclick="enterResult()" class="help-search"></span>
+                <span onclick="enterResult()" class="help-search"></span>
+                <span onclick="enterResult()" class="help-search"></span>
+            </div>
+            <div class="search-result-text">
+                <span class="searchText">Sorry, we didn't find anything for your request.</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
